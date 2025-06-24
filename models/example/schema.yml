@@ -1,0 +1,71 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  - name: employee
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+  - name: customers
+    description: "A starter dbt model"
+    columns:
+      - name: C_CUSTKEY
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name : C_NAME
+        description: "name of customer"
+sources:
+  - name: RAW_SCHEMA
+    database: KRISHNA_DBT_DB
+    schema: RAW_SCHEMA
+    description: employee table
+    tables:
+      - name: emp 
+        description: first table
+        columns:
+          - name: id
+            description: id columns
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: name of employee
+  - name: TPCH_SF1
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    description: sample data in tpch schema
+    tables:
+      - name: CUSTOMER 
+        description: customer table
+        columns:
+          - name: C_CUSTKEY
+            description: idcustomer key columns
+            tests:
+              - unique
+              - not_null
+          - name: C_NAME
+            description: name of employee
