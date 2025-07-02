@@ -1,0 +1,38 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      account: yplhvzj-jy90375
+      database: KRISHNA_DBT_DB
+      password: Krishnasai101245
+      role: ACCOUNTADMIN
+      schema: RAW_SCHEMA
+      threads: 1
+      type: snowflake
+      user: SAIKRISHNA1045
+      warehouse: COMPUTE_WH
+      client_session_keep_alive: False
+
+    staging:
+      account: yplhvzj-jy90375
+      database: KRISHNA_DBT_DB
+      password: Krishnasai101245
+      role: ACCOUNTADMIN
+      schema: RAW_SCHEMA
+      threads: 1
+      type: snowflake
+      user: SAIKRISHNA1045
+      warehouse: COMPUTE_WH
+      client_session_keep_alive: False
+
+    prod:
+      account: yplhvzj-jy90375
+      database: KRISHNA_DBT_DB
+      password: Krishnasai101245
+      role: ACCOUNTADMIN
+      schema: RAW_SCHEMA
+      threads: 1
+      type: snowflake
+      user: SAIKRISHNA1045
+      warehouse: COMPUTE_WH
+      client_session_keep_alive: False
